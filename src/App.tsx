@@ -6,11 +6,11 @@ import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import "./styles/global.scss";
 import Login from "./pages/login/Login";
-import User from "./pages/user/User";
+//import User from "./pages/user/User";
 import Product from "./pages/product/Product";
 import {
   QueryClient,
-  QueryClientProvider,
+  //QueryClientProvider,
 } from "@tanstack/react-query";
 import {
   BrowserRouter,
@@ -19,7 +19,7 @@ import {
   Outlet
 } from "react-router-dom";
 
-const queryClient = new QueryClient();
+//const queryClient = new QueryClient();
 
 export default function App() {
   const Layout = () => {
@@ -42,7 +42,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Set Layout as the main route */}
+        //{/* Set Layout as the main route */}
         <Route path="/" element={<Layout />}>
           {/* Define children routes */}
           <Route index element={<Home />} />
