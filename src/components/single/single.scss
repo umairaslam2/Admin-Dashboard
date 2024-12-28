@@ -1,9 +1,10 @@
-@import "../../styles/responsive.scss";
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/responsive.scss" as resp;
 
 .single {
   display: flex;
 
-  @include xl{
+  @include resp.xl {
     flex-direction: column;
     gap: 50px;
   }
@@ -26,10 +27,13 @@
 
         h1 {
           font-weight: 500;
+          color: vars.$main-color; // Set text color to the main color variable
         }
       }
+
       .details {
         font-size: 18px;
+        color: vars.$soft-color; // Set text color to the soft color variable
 
         .item {
           margin: 30px 0px;
@@ -38,6 +42,7 @@
             font-weight: 600;
             margin-right: 10px;
             text-transform: capitalize;
+            color: vars.$main-color; // Set item title color to main color
           }
         }
       }
@@ -46,10 +51,10 @@
     hr {
       width: 90%;
       height: 0;
-      border: 0.5px solid gray;
+      border: 0.5px solid vars.$soft-bg; // Use soft-bg for the border color
       margin: 20px 0px;
 
-      @include md{
+      @include resp.md {
         display: none;
       }
     }
@@ -59,16 +64,18 @@
       width: 80%;
       height: 400px;
 
-      @include md{
+      @include resp.md {
         display: none;
       }
     }
   }
+
   .activities {
     flex: 1;
 
     h2 {
       margin-bottom: 20px;
+      color: vars.$main-color; // Set heading color to main color
     }
 
     ul {
@@ -96,16 +103,18 @@
           padding: 15px;
           background-color: #f45b6810;
 
-          @include md{
+          @include resp.md {
             min-width: 250px;
           }
 
-          p{
+          p {
             margin-bottom: 5px;
+            color: vars.$soft-color; // Color for the paragraph text
           }
 
-          time{
+          time {
             font-size: 12px;
+            color: vars.$soft-color; // Color for the time text
           }
         }
       }

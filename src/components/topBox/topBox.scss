@@ -1,10 +1,11 @@
-@import "../../styles/responsive.scss";
+@use "../../styles/variables.scss" as *; // Use all variables from variables.scss
+@use "../../styles/responsive.scss" as *;
 
 .topBox {
   h1 {
     margin-bottom: 20px;
 
-    @include xxl{
+    @include xxl {
       font-size: 24px;
     }
   }
@@ -26,10 +27,11 @@
           border-radius: 50%;
           object-fit: cover;
 
-          @include xxl{
+          @include xxl {
             display: none;
           }
-          @include lg{
+
+          @include lg {
             display: block;
           }
         }
@@ -42,14 +44,18 @@
           .username {
             font-size: 14px;
             font-weight: 500;
+            color: $main-color; // Set username color to main color
           }
+
           .email {
+            color: $soft-color; // Set email color to soft color
             font-size: 12px;
 
-            @include xxl{
+            @include xxl {
               display: none;
             }
-            @include lg{
+
+            @include lg {
               display: block;
             }
           }
@@ -58,6 +64,7 @@
 
       .amount {
         font-weight: 500;
+        color: $main-color; // Set amount color to main color
       }
     }
   }

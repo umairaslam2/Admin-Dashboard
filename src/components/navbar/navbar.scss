@@ -1,4 +1,5 @@
-@import "../../styles/responsive.scss";
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/responsive.scss" as resp;
 
 .navbar {
   width: 100%;
@@ -12,14 +13,16 @@
     align-items: center;
     font-weight: bold;
     gap: 10px;
+    color: vars.$main-color;
   }
+
   .icons {
     display: flex;
     align-items: center;
     gap: 20px;
 
-    .icon{
-      @include sm{
+    .icon {
+      @include resp.sm {
         display: none;
       }
     }
@@ -28,8 +31,8 @@
       position: relative;
 
       span {
-        background-color: red;
-        color: white;
+        background-color: vars.$dark-color; // Updated to use your defined variable
+        color: vars.$main-color;
         width: 16px;
         height: 16px;
         border-radius: 50%;

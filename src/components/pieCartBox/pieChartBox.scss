@@ -1,5 +1,5 @@
-@import "../../styles/responsive.scss";
-
+@use "../../styles/variables.scss" as vars;
+@use "../../styles/responsive.scss" as resp;
 
 .pieChartBox {
   height: 100%;
@@ -7,9 +7,10 @@
   flex-direction: column;
   justify-content: space-between;
 
-  h1{
-    @include xxl{
+  h1 {
+    @include resp.xxl {
       font-size: 24px;
+      color: vars.$main-color; // Updated to use main color variable
     }
   }
 
@@ -26,6 +27,7 @@
     justify-content: space-between;
     gap: 10px;
     font-size: 14px;
+    color: vars.$soft-color; // Updated to use soft color for text
 
     .option {
       display: flex;
@@ -42,6 +44,7 @@
           width: 10px;
           height: 10px;
           border-radius: 50%;
+          background-color: vars.$dark-color; // Updated to use dark color for dots
         }
       }
     }
